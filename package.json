@@ -37,7 +37,11 @@
     "test:csp": "node scripts/check-csp.js",
     "test:title-sort": "node scripts/check-title-sort.js",
     "test:allpages-directory": "node scripts/check-allpages-directory.js",
-    "test:og-text-layout": "node scripts/check-og-text-layout.js"
+    "test:og-text-layout": "node scripts/check-og-text-layout.js",
+    "test:wiki-links": "node scripts/check-wiki-links.js",
+    "test:unit": "npm run test:content-sanitizer && npm run test:warm-function && npm run test:sync-article-paths && npm run test:article-image-assets && npm run test:external-links && npm run test:history-parser && npm run test:sync-categories && npm run test:sync-json-assets && npm run test:wiki-link-resolver && npm run test:robots && npm run test:mobile-header-search && npm run test:structured-data && npm run test:opensearch && npm run test:skip-link && npm run test:linkgraph-infobox && npm run test:csp && npm run test:title-sort && npm run test:og-text-layout",
+    "test:build": "npm run test:history-privacy && npm run test:article-script-placement && npm run test:search-data && npm run test:article-slugmap && npm run test:wiki-links && npm run test:search-prefill && npm run test:allpages-directory",
+    "test": "npm run test:unit && npm run test:build"
   },
   "dependencies": {
     "@astrojs/mdx": "^5.0.6",
